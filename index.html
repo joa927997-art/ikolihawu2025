@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Sabu Raijua</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📘 Sabu Raijua</h1>
+            <div class="theme-toggle">
+                <button onclick="toggleTheme()">🌗 Dark/Light</button>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('search')">Search</button>
+            <button class="tab-button" onclick="openTab('glossary')">Glossary</button>
+        </div>
+
+        <!-- Search Tab -->
+        <div id="search" class="tab-content active">
+            <input type="text" id="searchBox" placeholder="🔍 Search for a word..." oninput="searchWord()">
+            <ul id="autocomplete-list" class="autocomplete-items"></ul>
+            <div id="result"></div>
+        </div>
+
+        <!-- Glossary Tab -->
+        <div id="glossary" class="tab-content">
+            <div id="alphabet-nav" class="alphabet-nav"></div>
+            <div id="glossary-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Sabu Raijua</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
